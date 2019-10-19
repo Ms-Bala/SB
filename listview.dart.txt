@@ -1,0 +1,22 @@
+import 'package:flutter/material.dart';
+
+class listv extends StatelessWidget{
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+        child: ListView.separated(
+            shrinkWrap: true,
+            itemBuilder: (context, index) {
+              return ListTile(
+                title: Text("doctor1"),
+                subtitle: Text("nurologist"),
+                trailing: Text("Time 11:30 AM"),
+              );
+            },                      separatorBuilder: (context, index) {
+          return Divider(height: 16);
+        },              itemCount: 10)
+    );
+
+  }
+
+}
